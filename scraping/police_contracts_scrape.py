@@ -16,7 +16,7 @@ import urllib.request
 import csv
 
 #Set Working Directory
-fldr = "C:/Users/marti/arbitration/scraping/"
+fldr = "C:/Users/marti/new_jersey_arbitration/scraping/"
 os.chdir(fldr)
 driver = webdriver.Chrome(fldr + 'chromedriver.exe')
 
