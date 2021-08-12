@@ -15,7 +15,7 @@ def grayscale(image):
 pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\tesseract.exe"
 
 #Define working directory
-fldr = "C:\\Users\\marti\\arbitration\\ocr_IA"
+fldr = "C:\\Users\\marti\\new_jersey_arbitration\\ocr_IA"
 os.chdir(fldr)
 
 #Folder of pdfs:
@@ -42,7 +42,7 @@ for file in pdf_files:
     images = convert_from_path(file, 100)
     titles = []
     try:
-        for index, image in enumerate(images, start=1):
+        for index, image in enumerate(images, start=0):
             title = 'out_'+str(index) + '.jpg'
             titles.append(title)
             try:
@@ -53,17 +53,17 @@ for file in pdf_files:
         pass
     print(filename+': ' + str(len(images))+' pages. OCR and saving.')
     
-    #Image Preprocessing:
+    #Image Preprocessing (convert to black and white then thresholding)
     image_files = glob(image_folder + '/*.jpg')
     for image in image_files:
         image_filename = image.split('.jpg')[0].split('\\')[-1]
         image = cv2.imread(image)
         gray_image = grayscale(image)
-        thresh, im_bw = cv2.threshold(gray_image, 127, 255, cv2.THRESH_BINARY, cv2.THRESH_OTSU)
+        thresh, im_bw = cv2.threshold(gray_image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         cv2.imwrite(image_folder_thresh + image_filename + '.jpg', im_bw)
 
         
-    #OCR Images
+    #OCR Images using tesseract
     for title in titles:
         try:
             data = pytesseract.image_to_string(Image.open(image_folder_thresh+title))
@@ -77,6 +77,7 @@ for file in pdf_files:
         
     print('OCR Complete')
     
+    # Clear out temporary folder
     files = glob(image_folder+'*')
     for f in files:
         os.remove(f)

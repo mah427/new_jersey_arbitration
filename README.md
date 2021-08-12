@@ -8,14 +8,17 @@ Last Updated 8/11/2021
     * Google Tesseract-OCR (using Python Wrapper)
         * See OCR_IA folder: text out put is generally fairly accurate but can be impropved with processing. This method also strugles capturing some of the formatting. 
     * ABBYY FineReader
-        * Potential to save output as html and use BeautifulSoup to get the text from different elements. This would be extremely advantageous when categorizing different parts of 
+        * Potential to save output as html and use BeautifulSoup to get the text from different elements. This would be extremely advantageous when categorizing different parts of the awards.
 
-## Future Projects
+* Read through awards to get a better understanding of contents 
+
+## Future Tasks
 * Segment award text files into sections (union demands, city offer, award)
+    * Custom-built splitter relaing on the relatively standard format of awards anf contracts to 
 * Identify provisions of interest (using Rushin 2017) in the arbitration awards (and final offers)
-
+    * Text classification pipeline: Dataset preparation, feartture engineering (text data to featre vectors), model training
 ## Completed Taks
- * SCrape interest arbitration awards 
+ * Scraped interest arbitration awards and police CBAs from NJ PERC
 
 # Project Contents:
 Below is a describtion of the cntents and there purpose:
