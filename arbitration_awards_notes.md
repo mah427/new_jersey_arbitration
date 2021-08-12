@@ -4,10 +4,24 @@
 
 **Each arbitrator has template which they use to format the awards:**
 
-*Cure, I:*
+### Cure, I:
+
 I.  PROCEDURAL BACKGROUND
-II.  STIPULATIONS OF THE PARTIES
-III.  THE FINAL OFFERS OF THE PARTIES
+
+II.  PROPOSALS 
+
+> A. FINAL UNION PROPOSALS
+> B. FINAL "INSERT EMPLOYER" PROPOSALS
+
+III. STIPULATIONS OF THE PARTIES
+* Items over which the parties agreed to during arbitration
+
+IV. STATUTORY CRITERIA
+
+
+
+
+
     
     
 <ol type="I">
