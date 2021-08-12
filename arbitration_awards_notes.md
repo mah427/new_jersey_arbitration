@@ -31,10 +31,15 @@ VI. THE PARTIES DISCUSSION OF THEIR RESPECTIVE PROPOSALS (wording varies but usu
 
 VII. AWARD 
 
-Note: The Roman numerals are sometimes incorrectly numbered, and some sections are skipped in certain awards.
+Note: The Roman numerals are sometimes incorrectly numbered, and some sections are skipped in certain awards. This requires the custom-built splitter to identify sections based on keyword rather than section number.
 
+### Cure, I:
 
+<center><u>FINAL OFFERS OF THE PARTIES<u></center>
+<center>"Insert Union;s" Final Offer</center>
+Split into economic and noneconomic issues
+<center>"Insert Employer's" Final Offer</center>
 
-
+<center><u>BACKGROUND<u></center>
     
     
