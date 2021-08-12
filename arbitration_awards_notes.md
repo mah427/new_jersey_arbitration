@@ -17,10 +17,19 @@ II.  PROPOSALS
 
 > B. FINAL "INSERT EMPLOYER" PROPOSALS
 
-III. STIPULATIONS OF THE PARTIES (Items over which the parties agreed to during arbitration)
+    * Same Formating as Above
+
+III. STIPULATIONS OF THE PARTIES 
+
+* Items over which the parties agreed to during arbitration
 
 IV. STATUTORY CRITERIA
 
+V. BACKGROUND
+
+VI. THE PARTIES DISCUSSION OF THEIR RESPECTIVE PROPOSALS
+
+VIII. AWARD 
 
 
 
