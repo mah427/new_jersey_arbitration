@@ -12,12 +12,12 @@ II.  PROPOSALS
 
 > A. FINAL UNION PROPOSALS
 
-    * Proposed removals are bold and strikethrough
-    * Proposed additions are bold and underlined
+    >> Proposed removals are bold and strikethrough
+    >> Proposed additions are bold and underlined
 
 > B. FINAL "INSERT EMPLOYER" PROPOSALS
 
-    * Same Formating as Above
+    * Same Formating as above
 
 III. STIPULATIONS OF THE PARTIES 
 
