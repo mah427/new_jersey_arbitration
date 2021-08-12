@@ -12,6 +12,9 @@ II.  PROPOSALS
 
 > A. FINAL UNION PROPOSALS
 
+    * Proposed removals are bold and strikethrough
+    * Proposed additions are bold and underlined
+
 > B. FINAL "INSERT EMPLOYER" PROPOSALS
 
 III. STIPULATIONS OF THE PARTIES (Items over which the parties agreed to during arbitration)
