@@ -11,10 +11,10 @@ I.  PROCEDURAL BACKGROUND
 II.  PROPOSALS 
 
 > A. FINAL UNION PROPOSALS
+
 > B. FINAL "INSERT EMPLOYER" PROPOSALS
 
-III. STIPULATIONS OF THE PARTIES
-* Items over which the parties agreed to during arbitration
+III. STIPULATIONS OF THE PARTIES (Items over which the parties agreed to during arbitration)
 
 IV. STATUTORY CRITERIA
 
@@ -24,15 +24,3 @@ IV. STATUTORY CRITERIA
 
     
     
-<ol type="I">
-<li>Foo
-<ol type="A">
-<li>Bar</li>
-<li>Baz</li>
-</ol></li>
-<li>Quux</li>
-</ol>
-
-Line 1
-> line 2 
->> line 3
