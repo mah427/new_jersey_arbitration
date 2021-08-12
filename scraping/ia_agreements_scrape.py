@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Aug  6 15:08:26 2021
-
-@author: mhiti
-"""
 #Import Packages
 from bs4 import BeautifulSoup
 import os as os
@@ -14,7 +8,7 @@ import urllib.request
 import csv
 
 #Set Working Directory
-fldr = "C:/Users/marti/nj_arbitration/scraping/" #Working Directory
+fldr = "insert path" #Working Directory
 os.chdir(fldr)
 
 

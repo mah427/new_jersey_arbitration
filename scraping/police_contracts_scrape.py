@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jul 30 08:28:28 2021
-
-@author: mhiti
-"""
 #Import Packages
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -16,7 +10,7 @@ import urllib.request
 import csv
 
 #Set Working Directory
-fldr = "C:/Users/marti/new_jersey_arbitration/scraping/"
+fldr = "insert directory"
 os.chdir(fldr)
 driver = webdriver.Chrome(fldr + 'chromedriver.exe')
 

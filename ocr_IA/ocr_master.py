@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Aug  3 14:00:04 2021
-
-@author: mhiti
-"""
 #Imports
 import os
 import requests
