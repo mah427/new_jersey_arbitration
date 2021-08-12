@@ -35,13 +35,16 @@ Note: The Roman numerals are sometimes incorrectly numbered, and some sections a
 
 ### Cure, I:
 
-<p align=center><u>FINAL OFFERS OF THE PARTIES<u></p>
+<p align=center><ins>FINAL OFFERS OF THE PARTIES</ins></p>
 
 
-<center>"Insert Union's" Final Offer</center>
+<p align=center>FINAL OFFERS OF THE PARTIES</p>
+
 Split into economic and noneconomic issues
-<center>"Insert Employer's" Final Offer</center>
 
-<center><u>BACKGROUND<u></center>
+
+<p align=center>FINAL OFFERS OF THE PARTIES</p>
+
+<p align=center><ins>FINAL OFFERS OF THE PARTIES</ins></p>
     
     
