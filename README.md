@@ -4,6 +4,7 @@ Last Updated 8/11/2021
 
 # Project Steps
 ## Current Tasks
+* Set up collaboration with Git Hub
 * Convert scanned pdf's to machine readable text. Potential options:
     * Google Tesseract-OCR (using Python Wrapper)
         * See OCR_IA folder: text out put is generally fairly accurate but can be impropved with processing. This method also strugles capturing some of the formatting. 
