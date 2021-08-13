@@ -19,7 +19,7 @@ fldr = "C:\\Users\\marti\\new_jersey_arbitration\\ocr_IA"
 os.chdir(fldr)
 
 #Folder of pdfs:
-pdf_folder = os.path.join(os.getcwd(),'pdf','')
+pdf_folder = os.path.join(os.getcwd(),'pdf_test','')
 
 #Temp folder to save images
 image_folder = os.path.join(os.getcwd(), 'temp','')
@@ -66,8 +66,8 @@ for file in pdf_files:
     #OCR Images using tesseract
     for title in titles:
         try:
-            data = pytesseract.image_to_string(Image.open(image_folder_thresh+title))
-            with open(text_folder+filename+'_thresh.txt', 'a+') as f:
+            data = pytesseract.image_to_string(Image.open(image_folder+title))
+            with open(text_folder+filename+'.txt', 'a+') as f:
                 f.write(data)
         except:
             pass
