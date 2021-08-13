@@ -28,3 +28,27 @@ Below is a describtion of the cntents and there purpose:
 * OCR_IA (folder)
     * ocr_master.py: uses Google Tesseract-OCR to convert pdfs to txt files. 
     * OCR_preprocessing.ipynb: WORKING FILE: explores potential steps to preprocess the image to improve OCR quality
+
+## File Tree
+```
+new_jersey_arbitration
+│   README.md
+│   arbitration_awards_notes.md   
+│   Tesseract_ABBYY_Comparison.ipynb
+└───scraping
+│   │   ia_agreements_scrape.py
+│   │   police_contracts_scrape.py
+│   └───out_contracts
+│   │       municipalcontracts.csv
+│   └───out_ia
+│           files
+│           arbitration_awards.csv
+└───ocrIA
+│   │   ocr_master.py
+│   │  file022.txt
+│   └───pdf
+│   └───text
+└───abby_processing
+│   └───raw_data
+│   └───html
+```
