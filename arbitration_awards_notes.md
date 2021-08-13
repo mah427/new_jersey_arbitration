@@ -4,7 +4,7 @@
 
 **Each arbitrator has template which they use to format the awards. This formatting will assist in writing rules to help split the text into sections (especaially if formatting of OCR'ed pds if maintained using ABBYY)**
 
-### Cure, I:
+#### Cure, I:
 
 I.  PROCEDURAL BACKGROUND
 
@@ -34,7 +34,7 @@ VII. AWARD
 
 Note: The Roman numerals are sometimes incorrectly numbered, and some sections are skipped in certain awards. This requires the custom-built splitter to identify sections based on keyword rather than section number.
 
-### 	Gifford, R:
+#### Gifford, R:
 
 <p align=center><ins><b>FINAL OFFERS OF THE PARTIES</b></ins></p>
 
