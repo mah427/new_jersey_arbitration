@@ -19,7 +19,7 @@ fldr = "C:\\Users\\marti\\new_jersey_arbitration\\ocr_IA"
 os.chdir(fldr)
 
 #Folder of pdfs:
-pdf_folder = os.path.join(os.getcwd(),'pdf_test','')
+pdf_folder = os.path.join(os.getcwd(),'pdf','')
 
 #Temp folder to save images
 image_folder = os.path.join(os.getcwd(), 'temp','')
@@ -77,10 +77,16 @@ for file in pdf_files:
         
     print('OCR Complete')
     
-    # Clear out temporary folder
+    # Clear out temporary folders
     files = glob(image_folder+'*')
     for f in files:
         os.remove(f)
+    
+    files = glob(image_folder_thresh+'*')
+    for f in files:
+        os.remove(f)
+
+    
     print("Next Pdf")
 
 print("All PDFs complete")
