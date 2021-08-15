@@ -8,9 +8,8 @@ import urllib.request
 import csv
 
 #Set Working Directory
-fldr = "insert path" #Working Directory
+fldr = "/home/martin/new_jersey_arbitration/scraping"
 os.chdir(fldr)
-
 
 # Define function to downloaf pdf's
 def download_file(download_url, filename):
@@ -69,7 +68,7 @@ for index, award in enumerate(awards_soup):
     for i in histories:
         if i=="":
             histories.remove(i)
-            print("REmoved")
+            print("Removed")
     history = ";".join(histories)
     
     link_html=award_info_soup.find_all("a")
@@ -87,52 +86,52 @@ for index, award in enumerate(awards_soup):
     print(row)
     data.append(row)
 
-#Export meta-data to csv    
-os.chdir(fldr+'out_ia')
-df = pd.DataFrame(data, columns = headers)
-df.to_csv("arbitration_awards.csv")
-    
-#File Link and Date
-os.chdir(fldr+'out_ia/files')
-for html_index in link_html_index_list:
-    index = html_index[1]
-    
-    if index > 515:
-        html = html_index[0]
-        for element in html:
-            link = "https://www.perc.state.nj.us/" + element.get('href')
-            
-            if index in [444, 478, 493, 494]:
-                error_soup = BeautifulSoup(requests.get(link).content, 'html.parser')
-                error_htmls = error_soup.find_all("a")
-                for error_html in error_htmls:
-                    link = "https://www.perc.state.nj.us/" + error_html.get('href')
-                    link = link.replace("?OpenElement","")
-                    link2 = link.replace(" ","%20")
-                    index = html_index[1]
-                    filename = link.split("$File/")[1].split(".pdf")[0].replace("?OpenElement","").replace(".","" + "_") + "Index=" + str(index)
-                    download_file(link2, filename)
-                    print(filename, "downloaded")
-                    print("")
-                    
-            elif index in [449,450,516,517]:
-                error_htmls = html[1:]
-                for error_html in error_htmls:
-                    link = "https://www.perc.state.nj.us/" + error_html.get('href')
-                    link = link.replace("?OpenElement","")
-                    link2 = link.replace(" ","%20")
-                    index = html_index[1]
-                    filename = link.split("$File/")[1].split(".pdf")[0].replace("?OpenElement","").replace(".","" + "_") + "Index=" + str(index)
-                    download_file(link2, filename)
-                    print(filename, "downloaded")
-                    print("")
-                    
-            else:    
-                link = link.replace("?OpenElement","")
-                link2 = link.replace(" ","%20")
-                filename = link.split("$File/")[1].split(".pdf")[0].replace("?OpenElement","").replace(".","" + "_") + "Index=" + str(index)
-                download_file(link2, filename)
-                print(filename, "downloaded")
-                print("")
+# #Export meta-data to csv
+# os.chdir(fldr+'out_ia')
+# df = pd.DataFrame(data, columns = headers)
+# df.to_csv("arbitration_awards.csv")
+#
+# #File Link and Date
+# os.chdir(fldr+'out_ia/files')
+# for html_index in link_html_index_list:
+#     index = html_index[1]
+#
+#     if index > 515:
+#         html = html_index[0]
+#         for element in html:
+#             link = "https://www.perc.state.nj.us/" + element.get('href')
+#
+#             if index in [444, 478, 493, 494]:
+#                 error_soup = BeautifulSoup(requests.get(link).content, 'html.parser')
+#                 error_htmls = error_soup.find_all("a")
+#                 for error_html in error_htmls:
+#                     link = "https://www.perc.state.nj.us/" + error_html.get('href')
+#                     link = link.replace("?OpenElement","")
+#                     link2 = link.replace(" ","%20")
+#                     index = html_index[1]
+#                     filename = link.split("$File/")[1].split(".pdf")[0].replace("?OpenElement","").replace(".","" + "_") + "Index=" + str(index)
+#                     download_file(link2, filename)
+#                     print(filename, "downloaded")
+#                     print("")
+#
+#             elif index in [449,450,516,517]:
+#                 error_htmls = html[1:]
+#                 for error_html in error_htmls:
+#                     link = "https://www.perc.state.nj.us/" + error_html.get('href')
+#                     link = link.replace("?OpenElement","")
+#                     link2 = link.replace(" ","%20")
+#                     index = html_index[1]
+#                     filename = link.split("$File/")[1].split(".pdf")[0].replace("?OpenElement","").replace(".","" + "_") + "Index=" + str(index)
+#                     download_file(link2, filename)
+#                     print(filename, "downloaded")
+#                     print("")
+#
+#             else:
+#                 link = link.replace("?OpenElement","")
+#                 link2 = link.replace(" ","%20")
+#                 filename = link.split("$File/")[1].split(".pdf")[0].replace("?OpenElement","").replace(".","" + "_") + "Index=" + str(index)
+#                 download_file(link2, filename)
+#                 print(filename, "downloaded")
+#                 print("")
 
 
