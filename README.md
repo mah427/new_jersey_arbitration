@@ -5,7 +5,6 @@ Last Updated 8/11/2021
 # Project Steps
 ## Current Tasks
 
-* TEST
 
 * Set up collaboration with Git Hub
 * Convert scanned pdf's to machine readable text. Potential options:
