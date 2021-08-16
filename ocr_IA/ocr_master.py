@@ -12,10 +12,10 @@ def grayscale(image):
     return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 #Google Tesseract Path
-pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\tesseract.exe"
+#pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\tesseract.exe"
 
 #Define working directory
-fldr = "C:\\Users\\marti\\new_jersey_arbitration\\ocr_IA"
+fldr = "/home/martin/new_jersey_arbitration/ocr_IA"
 os.chdir(fldr)
 
 #Folder of pdfs:
@@ -35,7 +35,7 @@ pdf_files = glob(pdf_folder + '/*.pdf')
 
 for file in pdf_files:
     
-    filename = file.split('.pdf')[0].split('\\')[-1]
+    filename = file.split('.pdf')[0].split('/')[-1]
     print("File: ", filename, "Converting to image.")
     
     #Convert pdf to images
@@ -63,7 +63,7 @@ for file in pdf_files:
         cv2.imwrite(image_folder_thresh + image_filename + '.jpg', im_bw)
 
         
-    #OCR Images using tesseract
+    #OCR Images using tesseract (no threshold)
     for title in titles:
         try:
             data = pytesseract.image_to_string(Image.open(image_folder+title))
@@ -75,7 +75,21 @@ for file in pdf_files:
         page = "".join([letter for letter in title if letter.isdigit()])
         print("Page", page, "complete")
         
-    print('OCR Complete')
+    print('OCR Complete: no thresholding')
+    
+    #OCR Images using tesseract (threshold)
+    for title in titles:
+        try:
+            data = pytesseract.image_to_string(Image.open(image_folder_thresh+title))
+            with open(text_folder+filename+ '_thresh' + '.txt', 'a+') as f:
+                f.write(data)
+        except:
+            pass
+        
+        page = "".join([letter for letter in title if letter.isdigit()])
+        print("Page", page, "complete")
+        
+    print('OCR Complete: no thresholding')    
     
     # Clear out temporary folders
     files = glob(image_folder+'*')
