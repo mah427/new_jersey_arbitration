@@ -1,3 +1,16 @@
+'''
+Author: Martin
+Date Edited: 8/17/2021
+
+Purpose: Webscrape police union CBAs from NJ PERC outputing a .csv that contains 
+         contract metadata and downlaoding each of the arbitration awards
+         
+TO DO:
+    Re-write code to be robust to internet disconnection (using Selenium). Currently
+    the entire program crashes if connection is lost. 
+    
+    Download union contracs into out_contracts/files folder
+'''
 #Import Packages
 from bs4 import BeautifulSoup
 from selenium import webdriver

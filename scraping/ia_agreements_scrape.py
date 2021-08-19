@@ -1,3 +1,20 @@
+'''
+Author: Martin
+Date Edited: 8/17/2021
+
+IMPORTANT: This script is depricated. See ia_scrape for the improved file.
+
+
+Purpose: Webscrape arbitration awards from NJ PERC outputing a .csv that contains 
+         award metadata and downlaoding each of the arbitration awards
+         
+TO DO:
+    Simplify code to make future adaptations easier
+    
+    Modify code to account for the few files the are .docx
+    
+    Make it easier to link the downloaded file with the metadata in the csv 
+'''
 #Import Packages
 from bs4 import BeautifulSoup
 import os as os
