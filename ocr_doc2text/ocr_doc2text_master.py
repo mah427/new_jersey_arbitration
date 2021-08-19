@@ -1,8 +1,17 @@
-#-----------------------------------------------------------------------------
-# Converts scanned pdfs to machine readable text using doc2text
-#
-# link to package: https://github.com/mah427/doc2text
-#-----------------------------------------------------------------------------
+'''
+Purpose: Converts scanned pdfs to machine readable text using doc2text
+
+Links:
+    original package: https://github.com/jlsutherland/doc2text
+    forked package (updated for python3 compatability): https://github.com/mah427/doc2text
+
+Notes: 
+    This can be sed as a base for other OCR docments (just change contents of pdf folder)
+    
+TO DO:
+    Modify code so that it does not automaticallty OCR the documents and only
+    preprocesses the images to make the code more versatile
+'''
 
 import doc2text
 from glob import glob 

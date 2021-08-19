@@ -1,3 +1,22 @@
+'''
+Athor: Martin 
+Date Edited: 8/17/2021
+    
+IMPORTANT: This is not the most accurate ocr script. See doc2text for better results 
+
+Purpose: 
+    IMPORTANT: Can be used as a model/skeleton for future OCR attemps
+    Uses pytesseract to extract machine readable text from interest arbitration awards
+    
+
+Links: 
+    Pytesseract wrapper: https://pypi.org/project/pytesseract/
+        
+Notes:
+    Baseline attempt at extracting machine reada ble test from scanned PDFs
+    Uses simple preprocessing technique (thresholding) to improve quality
+'''
+
 #Imports
 import os
 import requests
