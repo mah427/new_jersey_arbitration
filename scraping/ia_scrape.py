@@ -1,10 +1,19 @@
 '''
+Author:
+    Martin Hiti
+    
+Last Update:
+    8/20/2021: 1) accounts for the fact that some of the awards are in .docx 
+    format and 2) adds an additional chunck of code that converts the award 
+    level data frame to a file level data frame as certain awards contain
+    multiple files.
+    
+IMPORTANT: 
+    This file should be used instead of the depricated ia_agreements_scrape.py
 
-IMPORTANT: This file should be used instead of the depricated ia_agreements_scrape.py
-
-Purpose: Fix the errors in ia_agreements_scrape.py (see To Do notes). The errors include:
-              - Make it easier to link interest arbitration pdfs with meta data
-              - Modify code to account for .docx files
+Purpose: 
+    Webscrape arbitration awards from NJ PERC outputing a .csv that contains 
+    award metadata and downlaoding each of the arbitration awards
 '''
 
 # Imports
@@ -116,6 +125,40 @@ for award in awards:
 #Save Data Frame as .csv
 os.chdir(out_folder)
 df.to_csv("arbitration_awards.csv")
-        
 
+##############################################################################
+
+#Data cleaning
+
+#Load in data
+award_data = pd.read_csv('/home/martin/new_jersey_arbitration/scraping/out_ia/arbitration_awards.csv')
+
+#Some awards contain multiple files: tranform from award level to file level
+file_data = pd.DataFrame()
+for ind in award_data.index:
+    filenames = award_data['Filenames'][ind]
+    
+    # Convert filenames for each award to a list
+    filenames = filenames.split('; ')
+    
+    # The dictionary below represents the data for each observation which is one file:
+    for file in filenames:
+        data = {
+            "Filename" : file,
+            "Current Docket" : award_data["Current Docket"][ind],
+            "Docket Numbers" : award_data["Docket Numbers"][ind],
+            "Public Employer": award_data["Public Employer"][ind],
+            "Union"          : award_data["Union"][ind],
+            "County"         : award_data["County"][ind],
+            "Arbitrator"     : award_data["Arbitrator"][ind],
+            "Date Received"  : award_data["Date Received"][ind],
+            "Award Type"     : award_data["Award Type"][ind],
+            "Current Status" : award_data["Current Status"][ind],
+            "Appellate Court": award_data["Appellate Court"][ind],
+            "Supreme Court"  : award_data["Supreme Court"][ind]        
+        }
+    
+        file_data = file_data.append(data, ignore_index=True)
+        
+file_data.to_csv("arbitrtation_awards_file_level.csv")
 
